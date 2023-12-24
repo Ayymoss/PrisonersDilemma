@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Plugin">
+            <HintPath>..\..\src\Strategy\bin\Debug\net8.0\PrisonersDilemma.Strategy.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="Build">
+        <PropertyGroup>
+            <TargetAssembly>$(TargetFileName)</TargetAssembly>
+        </PropertyGroup>
+
+        <Copy SourceFiles="$(OutputPath)$(TargetAssembly)" DestinationFolder="$(ProjectDir)..\..\src\PrisonersDilemma\bin\Debug\net8.0\_Strategies"/>
+    </Target>
+    
+</Project>
