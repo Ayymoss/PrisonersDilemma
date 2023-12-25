@@ -1,10 +1,10 @@
-﻿using PrisonersDilemma.Strategy.Enums;
+﻿using PrisonersDilemma.Abstraction.Enums;
 
 namespace PrisonersDilemma.Models;
 
 public class StrategyGames
 {
-    public List<Game> Games { get; set; }
+    public List<Game> Games { get; set; } = [];
 
     public int TotalPoints => Games.Sum(x => x.Points);
     public int TotalDefects => Games.Sum(x => x.Moves.Count(y => y is Choice.Defect));

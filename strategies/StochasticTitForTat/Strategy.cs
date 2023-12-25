@@ -1,5 +1,5 @@
-﻿using PrisonersDilemma.Strategy.Enums;
-using PrisonersDilemma.Strategy.Interfaces;
+﻿using PrisonersDilemma.Abstraction.Enums;
+using PrisonersDilemma.Abstraction.Interfaces;
 
 namespace StochasticTitForTat;
 
@@ -11,8 +11,8 @@ public class Strategy : IStrategy
                                  "a high probability (e.g., 90%). However, there's a small chance (e.g., 10%) of defecting even when " +
                                  "the opponent cooperated, introducing an element of unpredictability and reducing the risk of exploitation.";
 
-    public string Author { get; }
-    public string Version { get; }
+    public string Author => "Amos";
+    public string Version => "2023-12-24";
 
     private const double DeviationProbability = 0.1;
 

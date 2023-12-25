@@ -1,5 +1,5 @@
-﻿using PrisonersDilemma.Strategy.Enums;
-using PrisonersDilemma.Strategy.Interfaces;
+﻿using PrisonersDilemma.Abstraction.Enums;
+using PrisonersDilemma.Abstraction.Interfaces;
 
 namespace TFTWithForgiveness;
 
@@ -12,8 +12,8 @@ public class Strategy : IStrategy
                                  "probability. This allows for reconciliation after a period of retaliation without always holding " +
                                  "grudges forever.";
 
-    public string Author { get; }
-    public string Version { get; }
+    public string Author => "Amos";
+    public string Version => "2023-12-24";
 
     private const double ForgivenessProbability = 0.1;
 

@@ -1,4 +1,4 @@
-﻿using PrisonersDilemma.Strategy.Interfaces;
+﻿using PrisonersDilemma.Abstraction.Interfaces;
 
 namespace PrisonersDilemma.Caches;
 

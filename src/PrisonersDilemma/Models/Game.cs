@@ -1,5 +1,6 @@
-using PrisonersDilemma.Strategy.Enums;
-using PrisonersDilemma.Strategy.Interfaces;
+using PrisonersDilemma.Abstraction.Enums;
+using PrisonersDilemma.Abstraction.Interfaces;
+using PrisonersDilemma.Enums;
 
 namespace PrisonersDilemma.Models;
 

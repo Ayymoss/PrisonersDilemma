@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Strategy\Strategy.csproj" />
+      <ProjectReference Include="..\Abstraction\Abstraction.csproj" />
     </ItemGroup>
 
 </Project>

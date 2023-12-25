@@ -1,5 +1,5 @@
-﻿using PrisonersDilemma.Models;
-using PrisonersDilemma.Strategy.Interfaces;
+﻿using PrisonersDilemma.Abstraction.Interfaces;
+using PrisonersDilemma.Models;
 
 namespace PrisonersDilemma.Caches;
 

@@ -1,4 +1,4 @@
-﻿namespace PrisonersDilemma.Strategy.Enums;
+﻿namespace PrisonersDilemma.Enums;
 
 public enum GameState
 {

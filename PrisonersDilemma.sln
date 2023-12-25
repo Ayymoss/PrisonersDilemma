@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrisonersDilemma", "src\Pri
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{17FA9501-9889-4CE8-A61E-06598E2CBC91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "src\Strategy\Strategy.csproj", "{8F3CC7F6-2AD9-419B-9C9E-6B01DF4975D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstraction", "src\Abstraction\Abstraction.csproj", "{8F3CC7F6-2AD9-419B-9C9E-6B01DF4975D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "strategies", "strategies", "{2880ED61-892B-4317-92D5-2AEED3AA794E}"
 EndProject
@@ -27,6 +27,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuspiciousTitForTat", "strategies\SuspiciousTitForTat\SuspiciousTitForTat.csproj", "{4C44D1BC-34AE-40E1-A1CC-79BD94AA3CA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerousTitForTat", "strategies\GenerousTitForTat\GenerousTitForTat.csproj", "{D6B52976-BBAE-4CBC-AD49-24B3C89B597F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{EED14D63-C6D1-4812-8499-1384987AA77A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

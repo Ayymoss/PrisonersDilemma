@@ -8,7 +8,7 @@
 
     <ItemGroup>
         <Reference Include="Plugin">
-            <HintPath>..\..\src\Strategy\bin\Debug\net8.0\PrisonersDilemma.Strategy.dll</HintPath>
+            <HintPath>..\..\src\Abstraction\bin\Debug\net8.0\PrisonersDilemma.Abstraction.dll</HintPath>
         </Reference>
     </ItemGroup>
 
@@ -17,7 +17,8 @@
             <TargetAssembly>$(TargetFileName)</TargetAssembly>
         </PropertyGroup>
 
-        <Copy SourceFiles="$(OutputPath)$(TargetAssembly)" DestinationFolder="$(ProjectDir)..\..\src\PrisonersDilemma\bin\Debug\net8.0\_Strategies"/>
+        <Copy SourceFiles="$(OutputPath)$(TargetAssembly)"
+              DestinationFolder="$(ProjectDir)..\..\src\PrisonersDilemma\bin\Debug\net8.0\_Strategies" />
     </Target>
 
 </Project>

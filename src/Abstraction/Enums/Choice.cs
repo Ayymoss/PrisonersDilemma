@@ -1,4 +1,4 @@
-﻿namespace PrisonersDilemma.Strategy.Enums;
+﻿namespace PrisonersDilemma.Abstraction.Enums;
 
 public enum Choice
 {

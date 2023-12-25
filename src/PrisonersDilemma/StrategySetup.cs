@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
+using PrisonersDilemma.Abstraction.Interfaces;
 using PrisonersDilemma.Caches;
-using PrisonersDilemma.Strategy.Interfaces;
 
 namespace PrisonersDilemma;
 
@@ -19,7 +19,7 @@ public class StrategySetup(StrategiesCache strategiesCache)
                 IStrategy? strategy = null;
                 try
                 {
-                    strategy = (IStrategy?)Activator.CreateInstance(pluginType);
+                    strategy = Activator.CreateInstance(pluginType) as IStrategy;
                 }
                 catch
                 {

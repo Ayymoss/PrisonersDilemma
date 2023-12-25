@@ -1,10 +1,9 @@
-﻿using PrisonersDilemma.Strategy.Enums;
+﻿using PrisonersDilemma.Abstraction.Enums;
 
 namespace PrisonersDilemma.Utilities;
 
 public abstract class Helpers
 {
-    // TODO: Points are allocated to the opponent.
     public static (int OnePoints, int TwoPoints) PointLookup(Choice playerOne, Choice playerTwo) => (playerOne, playerTwo) switch
     {
         (Choice.Cooperate, Choice.Cooperate) => (3, 3),

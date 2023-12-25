@@ -4,10 +4,13 @@ using PrisonersDilemma.Services;
 
 namespace PrisonersDilemma;
 
-public class Setup
+public static class Setup
 {
-    public static async Task Main(string[] args)
+    public static async Task Main()
     {
+        if (!Directory.Exists(Path.Join(AppDomain.CurrentDomain.BaseDirectory, "_Strategies")))
+            Directory.CreateDirectory(Path.Join(AppDomain.CurrentDomain.BaseDirectory, "_Strategies"));
+
         var serviceCollection = new ServiceCollection()
             .AddSingleton<StrategySetup>()
             .AddSingleton<GameService>()

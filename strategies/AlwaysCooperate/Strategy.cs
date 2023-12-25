@@ -1,5 +1,5 @@
-﻿using PrisonersDilemma.Strategy.Enums;
-using PrisonersDilemma.Strategy.Interfaces;
+﻿using PrisonersDilemma.Abstraction.Enums;
+using PrisonersDilemma.Abstraction.Interfaces;
 
 namespace AlwaysCooperate;
 

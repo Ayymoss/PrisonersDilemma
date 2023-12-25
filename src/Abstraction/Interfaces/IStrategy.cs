@@ -1,6 +1,6 @@
-﻿using PrisonersDilemma.Strategy.Enums;
+﻿using PrisonersDilemma.Abstraction.Enums;
 
-namespace PrisonersDilemma.Strategy.Interfaces;
+namespace PrisonersDilemma.Abstraction.Interfaces;
 
 public interface IStrategy
 {
