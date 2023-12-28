@@ -12,7 +12,7 @@ public static class Setup
             Directory.CreateDirectory(Path.Join(AppDomain.CurrentDomain.BaseDirectory, "_Strategies"));
 
         var serviceCollection = new ServiceCollection()
-            .AddSingleton<StrategySetup>()
+            .AddSingleton<BuildStrategies>()
             .AddSingleton<GameService>()
             .AddSingleton<StrategiesCache>()
             .AddSingleton<GameCache>()

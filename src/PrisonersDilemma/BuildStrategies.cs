@@ -1,10 +1,9 @@
 ﻿using System.Reflection;
 using PrisonersDilemma.Abstraction.Interfaces;
-using PrisonersDilemma.Caches;
 
 namespace PrisonersDilemma;
 
-public class StrategySetup(StrategiesCache strategiesCache)
+public class BuildStrategies
 {
     public IEnumerable<IStrategy> SetupStrategies()
     {

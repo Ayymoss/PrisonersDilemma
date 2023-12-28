@@ -1,9 +1,10 @@
-﻿using PrisonersDilemma.Abstraction.Interfaces;
+﻿using System.Collections.Concurrent;
+using PrisonersDilemma.Abstraction.Interfaces;
 using PrisonersDilemma.Models;
 
 namespace PrisonersDilemma.Caches;
 
 public class GameCache
 {
-    public Dictionary<IStrategy, StrategyGames> GamesMap { get; set; } = [];
+    public ConcurrentDictionary<IStrategy, StrategyGames> GamesMap { get; set; } = [];
 }

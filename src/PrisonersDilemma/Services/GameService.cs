@@ -13,26 +13,21 @@ public class GameService(StrategiesCache strategiesCache, GameCache gameCache)
     public async Task StartGameAsync()
     {
         var strategies = strategiesCache.Strategies.ToList();
-        var tasks = new List<Task>();
+        var parallelOptions = new ParallelOptions {MaxDegreeOfParallelism = Environment.ProcessorCount};
 
-        foreach (var sOne in strategies)
+        await Parallel.ForEachAsync(strategies, parallelOptions, async (sOne, cancellationToken) =>
         {
-            gameCache.GamesMap.Add(sOne, new StrategyGames());
+            gameCache.GamesMap.TryAdd(sOne, new StrategyGames());
 
             foreach (var sTwo in strategies)
             {
                 AnsiConsole.MarkupLine($"[[[blue]{DateTimeOffset.UtcNow:HH:mm:ss.fff}[/]]] [lightseagreen]Starting[/] game between " +
                                        $"[green]{sOne.Name}[/] and [red]{sTwo.Name}[/]");
 
-                tasks.Add(Task.Run(async () =>
-                {
-                    await InitializeStrategiesAsync(sOne, sTwo);
-                    await RunStrategyGamesAsync(sOne, sTwo);
-                }));
+                await InitializeStrategiesAsync(sOne, sTwo);
+                await RunStrategyGamesAsync(sOne, sTwo);
             }
-        }
-
-        await Task.WhenAll(tasks);
+        });
     }
 
     private static async Task InitializeStrategiesAsync(IStrategy sOne, IStrategy sTwo)
@@ -50,7 +45,7 @@ public class GameService(StrategiesCache strategiesCache, GameCache gameCache)
 
     private async Task RunStrategyGamesAsync(IStrategy sOne, IStrategy sTwo)
     {
-        for (var i = 0; i < 1000; i++)
+        for (var i = 0; i < 10000; i++)
         {
             var currentGame = CreateNewGame(sTwo);
 
@@ -86,7 +81,7 @@ public class GameService(StrategiesCache strategiesCache, GameCache gameCache)
 
     private static async Task PlayRoundsAsync(IStrategy sOne, IStrategy sTwo, Game currentGame)
     {
-        for (var j = 0; j < 100; j++)
+        for (var j = 0; j < 1000; j++)
         {
             var oneResult = await sOne.TurnAsync(sTwo.Name, currentGame.Moves, currentGame.OpponentMoves);
             currentGame.Moves.Add(oneResult);

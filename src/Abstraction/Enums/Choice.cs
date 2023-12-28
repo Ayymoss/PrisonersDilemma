@@ -2,6 +2,6 @@
 
 public enum Choice
 {
-    Defect,
-    Cooperate
+    Cooperate,
+    Defect
 }
